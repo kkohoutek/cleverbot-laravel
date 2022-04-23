@@ -11,7 +11,7 @@ class Cleverbot
     public function __construct()
     {
         $this->client = new Client([
-            'base_url' => 'https://www.cleverbot.com',
+            'base_uri' => 'https://www.cleverbot.com/',
         ]);
     }
 
@@ -24,7 +24,7 @@ class Cleverbot
     public function query($input = '', $cs = '', $cb_settings_tweak1 = '', $cb_settings_tweak2 = '', $cb_settings_tweak3 = '')
     {
         $key = config('cleverbot.key');
-        $response = $this->client->get('/getreply', [
+        $response = $this->client->get('getreply', [
                 'query' => compact("key", "input", "cs", "cb_settings_tweak1", "cb_settings_tweak2", "cb_settings_tweak3")
         ]);
         return (array) json_decode($response->getBody(), true);
