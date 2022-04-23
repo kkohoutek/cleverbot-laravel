@@ -8,7 +8,6 @@ class Cleverbot
 
     public function __construct()
     {
-        $this->key = config('cleverbot.key');
         $this->client = new Client([
             'base_url' => 'https://www.cleverbot.com',
         ]);
