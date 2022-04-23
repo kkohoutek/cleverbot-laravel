@@ -25,7 +25,7 @@ class Cleverbot
     {
         $key = config('cleverbot.key');
         $response = $this->client->get('/getreply', [
-                'query' => compact("key", "input", "cs, $cb_settings_tweak", "cb_settings_tweak", "cb_settings_tweak")
+                'query' => compact("key", "input", "cs", "cb_settings_tweak1", "cb_settings_tweak2", "cb_settings_tweak3")
         ]);
         return (array) json_decode($response->getBody(), true);
     }
