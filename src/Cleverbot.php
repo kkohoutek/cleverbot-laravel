@@ -1,6 +1,6 @@
 <?php
 
-namespace \Kkohoutek\Cleverbot;
+namespace Kkohoutek\Cleverbot;
 
 use GuzzleHttp\Client;
 
