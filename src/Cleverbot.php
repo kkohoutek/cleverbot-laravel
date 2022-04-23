@@ -1,5 +1,7 @@
 <?php
 
+namespace \Kkohoutek\Cleverbot;
+
 use GuzzleHttp\Client;
 
 class Cleverbot
