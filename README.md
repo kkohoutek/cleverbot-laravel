@@ -1,7 +1,7 @@
 # cleverbot-laravel
 Laravel wrapper for the Cleverbot API.
 # Example
-```
+```php
 <?php
 
 use Illuminate\Support\Facades\App;
