@@ -1,0 +1,23 @@
+{
+    "name": "kkohoutek/cleverbot-laravel",
+    "description": "Laravel wrapper for the Cleverbot.com API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kamil Kohoutek"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kkohoutek\\Cleverbot\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kkohoutek\\Cleverbot\\CleverbotServiceProvider"
+            ]
+        }
+    }
+}
