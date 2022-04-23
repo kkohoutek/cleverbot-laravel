@@ -9,7 +9,7 @@ class CleverbotServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->publishes([__DIR__ . '../config/cleverbot.php' => config_path('cleverbot.php')]);
+        $this->publishes([__DIR__ . '/../config/cleverbot.php' => config_path('cleverbot.php')]);
     }
 
     public function register()
