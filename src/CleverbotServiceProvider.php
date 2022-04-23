@@ -2,7 +2,6 @@
 
 namespace Kkohoutek\Cleverbot;
 
-use Cleverbot;
 use Illuminate\Support\ServiceProvider;
 
 class CleverbotServiceProvider extends ServiceProvider
