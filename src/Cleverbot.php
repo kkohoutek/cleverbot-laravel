@@ -17,9 +17,9 @@ class Cleverbot
 
 
     /**
-     * Return parsed json response as associative array.
+     * Return parsed json response as an object.
      *
-     * @return array
+     * @return object
      */
     public function query($input = '', $cs = '', $cb_settings_tweak1 = '', $cb_settings_tweak2 = '', $cb_settings_tweak3 = '')
     {
@@ -27,6 +27,6 @@ class Cleverbot
         $response = $this->client->get('getreply', [
                 'query' => compact("key", "input", "cs", "cb_settings_tweak1", "cb_settings_tweak2", "cb_settings_tweak3")
         ]);
-        return (array) json_decode($response->getBody(), true);
+        return json_decode($response->getBody());
     }
 }
