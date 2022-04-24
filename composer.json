@@ -1,13 +1,18 @@
 {
     "name": "kkohoutek/cleverbot-laravel",
+    "type": "library",
     "description": "Laravel wrapper for the Cleverbot.com API",
+    "keywords": ["laravel","cleverbot","api"],
+    "homepage": "https://github.com/kkohoutek/cleverbot-laravel",
     "license": "MIT",
     "authors": [
         {
             "name": "Kamil Kohoutek"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.4.0"
+    },
     "autoload": {
         "psr-4": {
             "Kkohoutek\\Cleverbot\\": "src/"
