@@ -20,6 +20,8 @@ Route::get('/', function (Kkohoutek\Cleverbot\Cleverbot $cb) {
 [2022-04-23 18:20:15] local.DEBUG: No. That's not my name. \
 // How is it going?\
 [2022-04-23 18:20:16] local.DEBUG: Not telling you.\
+\
+\
 Use dependency injection to get access to the Cleverbot singleton. Use the ´query´ method to communicate with the Cleverbot API. The valid parsed JSON response looks like this (for more info, visit https://www.cleverbot.com/api/howto/):
 ```json
 {
