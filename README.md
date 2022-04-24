@@ -1,13 +1,18 @@
 # cleverbot-laravel
 Laravel wrapper for the Cleverbot API.\
 https://www.cleverbot.com/api/
-# Config
-In your .env file, add a line with your Cleverbot API key:
+# Install
+```
+composer require kkohoutek/cleverbot-laravel
+php artisan vendor:publish --force
+```
+Select KKohoutek\Cleverbot\CleverbotServiceProvider from the list.
+Then in your .env file, add a line with your Cleverbot API key:
 ```
 CLEVERBOT_API_KEY="your-api-key"
 ```
 
-# Usage example
+# Usage
 Use dependency injection to get access to the Cleverbot singleton. Use the ´query´ method to communicate with the API.
 ```php
 Route::get('/', function (Kkohoutek\Cleverbot\Cleverbot $cb) {
