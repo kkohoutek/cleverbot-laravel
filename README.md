@@ -1,19 +1,35 @@
 # cleverbot-laravel
-Laravel wrapper for the Cleverbot API.
+Laravel wrapper for the Cleverbot API.\
+https://www.cleverbot.com/api/
 # Example
+Use dependency injection to get access to the Cleverbot singleton. Use the ´query´ method to communicate with the Cleverbot API. The valid parsed JSON response looks like this:
+```json
+{
+  "cs":"76nxdxIJO2...AAA",
+  "interaction_count":"1",
+  "input":"",
+  "output":"Good afternoon.",
+  "conversation_id":"AYAR1E3ITW",
+  ...
+}
+```
+For more info, visit https://www.cleverbot.com/api/howto/
+
 ```php
-<?php
+Route::get('/', function (Kkohoutek\Cleverbot\Cleverbot $cb) {
 
-use Illuminate\Support\Facades\App;
-use Kkohoutek\Cleverbot\Cleverbot;
+    $response = $cb->query('Hello Cleverbot!');  
+    logger($response->output);
+    
+     // Keep passing ´cs´ continue the same conversation
+    $response = $cb->query('How are you doing?', $response->cs);  
+    logger($response->output);
+    
+    // ... Return  ...
+});
 
-$cb = App::make(Cleverbot::class);
-$response = $cb->query("Hello Cleverbot!");
-logger($response->output);
-$response = $cb->query("How is it going?", $response->cs);  // pass cs to continue conversation, keep blank to start a fresh one
-logger($response->output);
 ```
 // Hello Cleverbot!\
 [2022-04-23 18:20:15] local.DEBUG: No. That's not my name. \
 // How is it going?\
-[2022-04-23 18:20:16] local.DEBUG: Not telling you.\
+[2022-04-23 18:20:16] local.DEBUG: Not telling you.
